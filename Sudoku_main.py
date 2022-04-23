@@ -7,8 +7,8 @@ needs to be replaced if an online version - engine the same
 imports
 """
 import pygame as p
-import Sudoku_engine
-import Sudoku_img_rec
+import Sudoku.Sudoku_engine as se
+import Sudoku.Sudoku_img_rec as sudId
 
 """
 constants
@@ -21,7 +21,7 @@ IMAGES = {}
 
 
 def getBoard():
-    id = Sudoku_img_rec.image_identifier()
+    id = sudId.image_identifier()
     id.loadImg("img\Sudoku2.png")
     id.findBoxes()
     board = id.idNumbers()
@@ -68,7 +68,7 @@ def main():
 
     board = getBoard()
 
-    gs = Sudoku_engine.GameState(board)
+    gs = se.GameState(board)
     sqSelected = () # keep track of last click - tuple
 
     running = True
