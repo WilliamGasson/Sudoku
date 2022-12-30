@@ -27,6 +27,9 @@ def getBoard():
     board = id.idNumbers()
     return board
 
+
+
+
 '''
 Draw the current state
 '''
@@ -66,9 +69,9 @@ def main():
     screen = p.display.set_mode((WIDTH,HEIGHT))
     clock = p.time.Clock()
 
-    board = getBoard()
+    #board = getBoard()
 
-    gs = Sudoku_engine.GameState(board)
+    gs = Sudoku_engine.GameState()#board)
     sqSelected = () # keep track of last click - tuple
 
     running = True
@@ -144,6 +147,7 @@ def main():
         drawGameSate(screen, gs)
         clock.tick(MAX_FPS)
         p.display.flip()
+        
 
 
 if __name__=="__main__":
