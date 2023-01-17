@@ -22,7 +22,7 @@ IMAGES = {}
 
 def getBoard():
     id = sudId.image_identifier()
-    id.loadImg("img\Sudoku2.png")
+    id.loadImg("..\img\Sudoku2.png")
     id.findBoxes()
     board = id.idNumbers()
     return board
