@@ -7,8 +7,8 @@ needs to be replaced if an online version - engine the same
 imports
 """
 import pygame as p
-import Sudoku_engine as se
-import Sudoku_img_rec as sudId
+import Sudoku.src.Sudoku_engine as se
+import Sudoku.src.Sudoku_img_rec as sudId
 
 """
 constants
